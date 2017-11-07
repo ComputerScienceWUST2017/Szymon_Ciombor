@@ -28,14 +28,14 @@ void linesWith(int c)
 }
 
 
-/*
+/* Redundant solution done to practice using arrays
 void linesWith(int c)
 {
     char text[5][50];
     for (int i = 0; i<5; i++)
     {
         fgets(text[i],50,stdin);
-        for (int j = 0; j < sizeof(text[i]);j++) //PIERDOLONE W DUPE PETLE FOR DZIALAJA INACZEJ NIZ W NORMALNYCH JEZYKACH
+        for (int j = 0; j < sizeof(text[i]);j++)
         {
             if (text[i][j] == c)
             {
