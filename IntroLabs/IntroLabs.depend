@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1510013066 source:c:\programy\introlabs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Greetings.h"
+
+1508692232 c:\programy\introlabs\greetings.h
+
+1508694777 source:c:\programy\introlabs\greetings.c
+	<stdio.h>
+	<stdlib.h>
+
+1508695832 source:c:\programy\introlabs\greetings.h
+
+1510016996 source:c:\programy\introlabs\simple.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
