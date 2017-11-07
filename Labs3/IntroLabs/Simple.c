@@ -19,7 +19,7 @@ void linesWith(int c)
             }
         }
     }
-    printf("The lines containing %c are :\n",'c');
+    printf("The lines containing %c are :\n",c);
     int k;
     for (k = 0; k < j; k++)
     {
@@ -28,7 +28,7 @@ void linesWith(int c)
 }
 
 
-/* Redundant solution done to practice using arrays
+ /*Redundant solution done to practice using arrays
 void linesWith(int c)
 {
     char text[5][50];

@@ -17,3 +17,18 @@
 	<stdlib.h>
 	<string.h>
 
+1508694777 source:c:\programy\labs3\introlabs\greetings.c
+	<stdio.h>
+	<stdlib.h>
+
+1510017022 source:c:\programy\labs3\introlabs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Greetings.h"
+
+1508692232 c:\programy\labs3\introlabs\greetings.h
+
+1510053315 source:c:\programy\labs3\introlabs\tokenfunctions.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -38,6 +38,10 @@
 		<Unit filename="Simple.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Simple.h" />
+		<Unit filename="TokenFunctions.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
