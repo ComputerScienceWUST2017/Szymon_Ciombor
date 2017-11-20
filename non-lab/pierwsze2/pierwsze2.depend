@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1508527358 source:c:\programy\pierwsze2\funkcja.c
+	<stdio.h>
+	<stdlib.h>
+
+1508528859 source:c:\programy\pierwsze2\main.c
+	<stdio.h>
+	<stdlib.h>
+

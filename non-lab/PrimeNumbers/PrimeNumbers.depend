@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1510078667 source:c:\programy\non-lab\primenumbers\prime.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1510078297 source:c:\programy\non-lab\primenumbers\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
