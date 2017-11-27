@@ -5,46 +5,29 @@
 int main()
 {
     int len = 256;
-    char string[len];
-    if (nextWord(string,len) == 1)
+    char buffer[len];
+    while (scanf("%s",buffer) == 1)
     {
-        printf("TRUE\n");
-    }
-    else
-    {
-        printf("FALSE\n");
-    }
-    if (nextName(string,len) == 1)
-    {
-        printf("TRUE\n");
-    }
-    else
-    {
-        printf("FALSE\n");
-    }
-    if (nextIntNumber(string,len) == 1)
-    {
-        printf("TRUE\n");
-    }
-    else
-    {
-        printf("FALSE\n");
-    }
-    if (nextFpNumber(string,len) == 1)
-    {
-        printf("TRUE\n");
-    }
-    else
-    {
-        printf("FALSE\n");
-    }
-    if (nextTelNumber(string,len) == 1)
-    {
-        printf("TRUE\n");
-    }
-    else
-    {
-        printf("FALSE\n");
+        if (nextWord(buffer,len) == 1)
+        {
+            printf("The string is a word!\n");
+        }
+        if (nextName(buffer,len) == 1)
+        {
+            printf("The string is a name!\n");
+        }
+        if (nextIntNumber(buffer,len) == 1)
+        {
+            printf("The string is an integer number!\n");
+        }
+        if (nextFpNumber(buffer,len) == 1)
+        {
+            printf("The string is a floating point number!\n");
+        }
+        if (nextTelNumber(buffer,len) == 1)
+        {
+            printf("The string is a telephone number!\n");
+        }
     }
     return 0;
 }

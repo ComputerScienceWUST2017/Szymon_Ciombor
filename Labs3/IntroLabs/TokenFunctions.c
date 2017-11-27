@@ -55,7 +55,6 @@ int isDigitOrPoint(char character)
 int nextWord(char* buffer, int len)
 {
     int i = 0;
-    scanf("%s", buffer);
     for (i = 0; i < strlen(buffer); i++)
     {
         if ((isULetter(buffer[i]) == 1) || (isLLetter(buffer[i]) == 1)) //check whether the character belongs to the alphabet
@@ -75,8 +74,6 @@ int nextWord(char* buffer, int len)
 int nextName(char* buffer, int len)
 {
     int i = 0;
-
-    scanf("%s", buffer);
     for (i = 1; i < strlen(buffer); i++)
     {
         if ((isULetter(buffer[0]) == 1) && (isLLetter(buffer[i]) == 1)) //check whether the character belongs to the alphabet and if the first character is uppercase
@@ -94,7 +91,6 @@ int nextName(char* buffer, int len)
 int nextIntNumber(char* buffer, int len)
 {
     int i = 0;
-    scanf("%s", buffer);
     for (i = 1; i < strlen(buffer); i++)
     {
         if (((isSign(buffer[0]) == 1) || (isDigit(buffer[0]) == 1)) && (isDigit(buffer[i]) == 1)) //check whether the first character is a - sign, + sign or a digit and if the remaining characters are digits
@@ -113,7 +109,6 @@ int nextFpNumber(char* buffer, int len)
 {
     int i = 0;
     int containsPoint = 0;
-    scanf("%s", buffer);
     for (i = 1; i < strlen(buffer); i++)
     {
         if (isPoint(buffer[i]) == 1)
@@ -147,8 +142,6 @@ int nextTelNumber(char* buffer, int len)
     int i = 0;
     int numberAmount = 0;
     int slashAmount = 0;
-
-    scanf("%s", buffer);
     for (i = 0; i < strlen(buffer); i++)
     {
         if (isDigit(buffer[i]) == 1)

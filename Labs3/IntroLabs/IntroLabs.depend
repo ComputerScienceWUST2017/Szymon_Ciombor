@@ -85,3 +85,25 @@
 	<string.h>
 	"TokenFunctions.h"
 
+1511194002 source:c:\programy\github\szymon_ciombor\labs3\introlabs\greetings.c
+	<stdio.h>
+	<stdlib.h>
+
+1511194002 source:c:\programy\github\szymon_ciombor\labs3\introlabs\simple.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1511796561 source:c:\programy\github\szymon_ciombor\labs3\introlabs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"TokenFunctions.h"
+
+1511794534 c:\programy\github\szymon_ciombor\labs3\introlabs\tokenfunctions.h
+
+1511796378 source:c:\programy\github\szymon_ciombor\labs3\introlabs\tokenfunctions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TokenFunctions.h"
+
