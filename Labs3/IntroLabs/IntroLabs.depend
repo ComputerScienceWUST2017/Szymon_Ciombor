@@ -41,24 +41,24 @@
 
 1511129587 c:\programy\labs3\introlabs\tokenfunctions.h
 
-1511194002 source:d:\users\242565\labs3\introlabs\greetings.c
+1511798812 source:d:\users\242565\labs3\introlabs\greetings.c
 	<stdio.h>
 	<stdlib.h>
 
-1511194002 source:d:\users\242565\labs3\introlabs\simple.c
+1511798812 source:d:\users\242565\labs3\introlabs\simple.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1511199384 source:d:\users\242565\labs3\introlabs\tokenfunctions.c
+1511802710 source:d:\users\242565\labs3\introlabs\tokenfunctions.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"TokenFunctions.h"
 
-1511194818 d:\users\242565\labs3\introlabs\tokenfunctions.h
+1511802746 d:\users\242565\labs3\introlabs\tokenfunctions.h
 
-1511199391 source:d:\users\242565\labs3\introlabs\main.c
+1511798812 source:d:\users\242565\labs3\introlabs\main.c
 	<stdio.h>
 	<stdlib.h>
 	"TokenFunctions.h"
