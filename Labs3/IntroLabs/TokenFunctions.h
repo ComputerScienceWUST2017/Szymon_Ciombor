@@ -1,6 +1,11 @@
 #ifndef TOKENFUNCTIONS_H_INCLUDED
 #define TOKENFUNCTIONS_H_INCLUDED
-
+int isLLetter(char character);
+int isULetter(char character);
+int isDigit(char character);
+int isSign(char character);
+int isPoint(char character);
+int isDigitOrPoint(char character);
 int nextWord(char* buffer, int len);
 int nextName(char* buffer, int len);
 int nextIntNumber(char* buffer, int len);

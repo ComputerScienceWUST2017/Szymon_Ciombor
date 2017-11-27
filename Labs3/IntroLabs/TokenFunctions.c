@@ -3,92 +3,175 @@
 #include <string.h>
 #include "TokenFunctions.h"
 
-
+int isULetter(char character)
+{
+    if ((character >= 'A') && (character <= 'Z'))
+    {
+        return 1;
+    }
+    return 0;
+}
+int isLLetter(char character)
+{
+    if ((character >= 'a') && (character <= 'z'))
+    {
+        return 1;
+    }
+    return 0;
+}
+int isDigit(char character)
+{
+    if ((character >= '0') && (character <= '9'))
+    {
+        return 1;
+    }
+    return 0;
+}
+int isSign(char character)
+{
+    if ((character == '+') || (character == '-'))
+    {
+        return 1;
+    }
+    return 0;
+}
+int isPoint(char character)
+{
+    if (character == '.')
+    {
+        return 1;
+    }
+    return 0;
+}
+int isDigitOrPoint(char character)
+{
+    if ((isPoint(character) == 1) || (isDigit(character) == 1))
+    {
+        return 1;
+    }
+    return 0;
+}
 
 int nextWord(char* buffer, int len)
 {
-    char token[len];
-    fgets(buffer, len, stdin);
     int i = 0;
-    int j = 0;
-BEGIN:
-    while (buffer[j] != '\0')
+    scanf("%s", buffer);
+    for (i = 0; i < strlen(buffer); i++)
     {
-
-        sscanf(buffer + j, "%s", token);
-        for (i = 0; i < strlen(token); i++)
+        if ((isULetter(buffer[i]) == 1) || (isLLetter(buffer[i]) == 1)) //check whether the character belongs to the alphabet
         {
-            if (((token[i] >= 'A') && (token[i] <= 'Z')) || ((token[i] >= 'a') && (token[i] <= 'z'))) //check whether the character belongs to the alphabet
-            {
-                continue;
-            }
-            else
-            {
-                j = j + strlen(token) + 1;
-                goto BEGIN;
-            }
-
+            continue;
         }
-        return 1;
+        else
+        {
+            return 0;
+        }
+
     }
-    return EOF;
+    return 1;
 }
 
 
 int nextName(char* buffer, int len)
 {
-    char token[len];
-    fgets(buffer, len, stdin);
     int i = 0;
-    int j = 0;
-BEGIN:
-    while (buffer[j] != '\0')
+
+    scanf("%s", buffer);
+    for (i = 1; i < strlen(buffer); i++)
     {
-
-        sscanf(buffer + j, "%s", token);
-        for (i = 1; i < strlen(token); i++)
+        if ((isULetter(buffer[0]) == 1) && (isLLetter(buffer[i]) == 1)) //check whether the character belongs to the alphabet and if the first character is uppercase
         {
-            if (((token[0] >= 'A') && (token[0] <= 'Z')) && ((token[i] >= 'a') && (token[i] <= 'z'))) //check whether the character belongs to the alphabet and if the first character is uppercase
-            {
-                continue;
-            }
-            else
-            {
-                j = j + strlen(token) + 1;
-                goto BEGIN;
-            }
-
+            continue;
         }
-        return 1;
-    }
-    return EOF;
-}
+        else
+        {
+            return 0;
+        }
 
+    }
+    return 1;
+}
 int nextIntNumber(char* buffer, int len)
 {
-    char token[len];
-    fgets(buffer, len, stdin);
     int i = 0;
-    int j = 0;
-BEGIN:
-    while (buffer[j] != '\0')
+    scanf("%s", buffer);
+    for (i = 1; i < strlen(buffer); i++)
     {
-
-        sscanf(buffer + j, "%s", token);
-        for (i = 1; i < strlen(token); i++)
+        if (((isSign(buffer[0]) == 1) || (isDigit(buffer[0]) == 1)) && (isDigit(buffer[i]) == 1)) //check whether the first character is a - sign, + sign or a digit and if the remaining characters are digits
         {
-            if (((token[0] == '+') || (token[0] == '-')) || (((token[0] >= '0') && (token[0] <= '9')) && ((token[i] >= '0') && (token[i] <= '9')))) //check whether the first character is a - sign, + sign or a digit and if the remaining characters are digits
+            continue;
+        }
+        else
+        {
+            return 0;
+        }
+
+    }
+    return 1;
+}
+int nextFpNumber(char* buffer, int len)
+{
+    int i = 0;
+    int containsPoint = 0;
+    scanf("%s", buffer);
+    for (i = 1; i < strlen(buffer); i++)
+    {
+        if (isPoint(buffer[i]) == 1)
+        {
+            containsPoint++;
+        }
+    }
+    for (i = 1; i < strlen(buffer); i++)
+    {
+        if (containsPoint == 1)
+        {
+            if (((isSign(buffer[0]) == 1) || (isDigit(buffer[0]) == 1)) && (isDigitOrPoint(buffer[i]) == 1)) //check whether character is a - sign, + sign or a digit and if the remaining characters are digits
             {
                 continue;
             }
             else
             {
-                j = j + strlen(token) + 1;
-                goto BEGIN;
+                return 0;
             }
-
         }
-        return 1;
+        else
+        {
+            return 0;
+        }
     }
-    return EOF;
+    return 1;
+}
+
+int nextTelNumber(char* buffer, int len)
+{
+    int i = 0;
+    int numberAmount = 0;
+    int slashAmount = 0;
+
+    scanf("%s", buffer);
+    for (i = 0; i < strlen(buffer); i++)
+    {
+        if (isDigit(buffer[i]) == 1)
+        {
+            if (( i != 3) && (i != 7))
+            {
+                numberAmount++;
+            }
+        }
+        else
+        {
+            if (((i == 3) || (i == 7)) && (buffer[i] == '/'))
+            {
+                slashAmount++;
+            }
+        }
+    }
+    if (strlen(buffer) == 11)
+    {
+        if ((numberAmount == 9) && (slashAmount == 2))
+        {
+            return 1;
+        }
+    }
+    return 0;
 }

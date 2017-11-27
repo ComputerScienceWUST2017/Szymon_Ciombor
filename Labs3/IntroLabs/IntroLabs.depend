@@ -41,3 +41,47 @@
 
 1511129587 c:\programy\labs3\introlabs\tokenfunctions.h
 
+1511194002 source:d:\users\242565\labs3\introlabs\greetings.c
+	<stdio.h>
+	<stdlib.h>
+
+1511194002 source:d:\users\242565\labs3\introlabs\simple.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1511199384 source:d:\users\242565\labs3\introlabs\tokenfunctions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TokenFunctions.h"
+
+1511194818 d:\users\242565\labs3\introlabs\tokenfunctions.h
+
+1511199391 source:d:\users\242565\labs3\introlabs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"TokenFunctions.h"
+
+1511194002 source:c:\users\242565\introlabs\greetings.c
+	<stdio.h>
+	<stdlib.h>
+
+1511194002 source:c:\users\242565\introlabs\simple.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1511794687 source:c:\users\242565\introlabs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"TokenFunctions.h"
+
+1511794534 c:\users\242565\introlabs\tokenfunctions.h
+
+1511794421 source:c:\users\242565\introlabs\tokenfunctions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TokenFunctions.h"
+

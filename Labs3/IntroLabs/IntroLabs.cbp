@@ -42,6 +42,7 @@
 		<Unit filename="TokenFunctions.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="TokenFunctions.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
