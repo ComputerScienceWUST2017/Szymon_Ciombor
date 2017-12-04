@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1512397231 source:c:\programy\github\szymon_ciombor\rangeselection\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"RangeSelection.h"
+
+1512396194 c:\programy\github\szymon_ciombor\rangeselection\rangeselection.h
+
+1512397500 source:c:\programy\github\szymon_ciombor\rangeselection\rangeselection.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"RangeSelection.h"
+
