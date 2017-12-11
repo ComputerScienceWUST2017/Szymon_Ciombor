@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1512413728 source:c:\programy\linemanager\main.c
+	<stdio.h>
+	<stdlib.h>
+	"WordTools.h"
+
+1512411957 c:\programy\linemanager\wordtools.h
+
+1512413712 source:c:\programy\linemanager\wordtools.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"WordTools.h"
+

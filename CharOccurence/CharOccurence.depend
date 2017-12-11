@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1513006179 source:c:\programy\github\szymon_ciombor\charoccurence\charoccurence.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"CharOccurence.h"
+
+1513005829 c:\programy\github\szymon_ciombor\charoccurence\charoccurence.h
+
+1513006560 source:c:\programy\github\szymon_ciombor\charoccurence\main.c
+	<stdio.h>
+	<stdlib.h>
+	"CharOccurence.h"
+
