@@ -1,32 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "RangeSelection.h"
 int main (int argc, char* argv[])
 {
     int len = 255;
     int i, filterPos;
-    int optionalArgCount = 0, endMode = 0, ignoreCase = 0, mode999 = 0, minusPos = 0;
+    int optionalArgCount = 0, ignoreCase = 0, minusPos = 0, isError = 0;
     char line[len], filter1[len], filter2[len];
     filter1[0] = '\0';
-    filter2[0] = '\0';
-    FILE *fp;
-    fp = fopen("InputLines.txt", "r");
     for (i = 1; i < argc; i++)
     {
-        if (strcmp(argv[i],"/E") == 0)
-        {
-            endMode = 1;
-            optionalArgCount++;
-        }
-        else if (strcmp(argv[i],"/I") == 0)
+        if (strcmp(argv[i],"/I") == 0)
         {
             ignoreCase = 1;
-            optionalArgCount++;
-        }
-        else if (strcmp(argv[i],"/999") == 0)
-        {
-            mode999 = 1;
             optionalArgCount++;
         }
         else if (strcmp(argv[i],"-") == 0)
@@ -46,36 +34,37 @@ int main (int argc, char* argv[])
             filterPos = i;
         }
     }
-    switch((argc-optionalArgCount))
+    while (fgets(line, sizeof(line), stdin) != '\0')
     {
-    case 2:
-        while (fgets(line, sizeof(line), fp) != '\0')
+        switch((argc-optionalArgCount))
         {
-            lineStartingWith(filter1, line);
-        }
-        break;
-    case 3:
-        if (minusPos != 0)
-        {
-            if (minusPos < filterPos)
+        case 2:
+            lineStartingWith(filter1, line,ignoreCase);
+            break;
+        case 3:
+            if (minusPos != 0)
             {
-                linePrecede(filter1,line);
+                if (minusPos < filterPos)
+                {
+                    linePrecede(filter1,line,ignoreCase);
+                }
+                if (minusPos > filterPos)
+                {
+                    lineFollow(filter1,line,ignoreCase);
+                }
             }
-            if (minusPos > filterPos)
+            else
             {
-                lineFollow(filter1,line);
+                lineRange(filter1,filter2,line,ignoreCase);
+            }
+            break;
+        default:
+            if (isError == 0)
+            {
+                fprintf(stderr,"Please provide proper parameters!");
+                isError = 1;
             }
         }
-        else
-        {
-            while (fgets(line, sizeof(line), fp) != '\0')
-            {
-                lineRange(filter1,filter2,line);
-            }
-        }
-        break;
-    default:
-        printf("usage: %s filter/lowerRange/- [upperRange/-]",argv[0]);
     }
     return 0;
 }

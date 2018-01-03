@@ -13,3 +13,18 @@
 	<string.h>
 	"RangeSelection.h"
 
+1512405881 source:d:\users\242565\rangeselection\rangeselection.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"RangeSelection.h"
+
+1512403712 d:\users\242565\rangeselection\rangeselection.h
+
+1512406296 source:d:\users\242565\rangeselection\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"RangeSelection.h"
+
