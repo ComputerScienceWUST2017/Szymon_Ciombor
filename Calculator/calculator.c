@@ -112,32 +112,33 @@ TokenType getNextToken(char tk[], int len)
     {
         return ADD;
     }
-    else if (isEquation(tk,len) == 1)
+    if (isEquation(tk,len) == 1)
     {
         return EQUALS;
     }
-    else if (isSubtraction(tk,len) == 1)
+    if (isSubtraction(tk,len) == 1)
     {
         return SUBTRACT;
     }
-    else if (isMultiplication(tk,len) == 1)
+    if (isMultiplication(tk,len) == 1)
     {
         return MULTIPLY;
     }
-    else if (isDivision(tk,len) == 1)
+    if (isDivision(tk,len) == 1)
     {
         return DIVIDE;
     }
-    else if (isPrev(tk,len) == 1)
+    if (isPrev(tk,len) == 1)
     {
         return PREV;
     }
-    else if ((nextIntNumber(tk,len) == 1) || (nextFpNumber(tk,len) == 1))
+    if ((nextIntNumber(tk,len) == 1) || (nextFpNumber(tk,len) == 1))
     {
         return NUMBER;
     }
     return WORD;
 }
+
 static char output[255];
 static double prevresult = 0;
 
@@ -200,27 +201,15 @@ char* lineCalc(char* line, int len)
                 memory = memory / prevresult;
             }
         }
-        if (currTokenType == ADD)
-        {
-            currOperation = ADD;
-        }
-        if (currTokenType == SUBTRACT)
-        {
-            currOperation = SUBTRACT;
-        }
-        if (currTokenType == MULTIPLY)
-        {
-            currOperation = MULTIPLY;
-        }
-        if (currTokenType == DIVIDE)
-        {
-            currOperation = DIVIDE;
-        }
         if (currTokenType == EQUALS)
         {
             sprintf(output, "%4.2f", memory);
             prevresult = memory;
             return output;
+        }
+        if (currTokenType != WORD)
+        {
+            currOperation = currTokenType;
         }
     }
     return "error";

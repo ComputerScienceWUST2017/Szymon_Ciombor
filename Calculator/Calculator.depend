@@ -1,16 +1,17 @@
 # depslib dependency file v1.0
-1513615498 source:d:\users\242565\calculator\calculator.c
+1514997071 source:d:\users\242565\calculator\calculator.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
+	"calculator.h"
 
-1513616481 source:d:\users\242565\calculator\main.c
+1514996488 source:d:\users\242565\calculator\main.c
 	<stdio.h>
 	<stdlib.h>
 	"calculator.h"
 
-1513616196 d:\users\242565\calculator\calculator.h
+1514996493 d:\users\242565\calculator\calculator.h
 
 1514915356 source:c:\programy\github\szymon_ciombor\calculator\calculator.c
 	<stdio.h>
