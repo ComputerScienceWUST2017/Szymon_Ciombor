@@ -6,7 +6,7 @@
 int main()
 {
 personalData data[10];
-int len= readData(data,sizeof(data)/sizeof(personalData));
+int len = readData(data,sizeof(data)/sizeof(personalData));
 int idx;
 char *msgBad="No available data";
 idx=getOldestPerson(data, len);

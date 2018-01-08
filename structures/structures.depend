@@ -13,3 +13,17 @@
 	<string.h>
 	<limits.h>
 
+1515421638 source:c:\programy\github\szymon_ciombor\structures\main.c
+	<stdio.h>
+	<stdlib.h>
+	"structures.h"
+
+1515424059 c:\programy\github\szymon_ciombor\structures\structures.h
+
+1515426071 source:c:\programy\github\szymon_ciombor\structures\structures.c
+	"structures.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+
