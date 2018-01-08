@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1515354433 source:c:\programy\structures\main.c
+	<stdio.h>
+	<stdlib.h>
+	"structures.h"
+
+1515354420 c:\programy\structures\structures.h
+
+1515355558 source:c:\programy\structures\structures.c
+	"structures.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+
